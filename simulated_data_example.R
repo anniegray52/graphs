@@ -43,7 +43,7 @@ cosy = (cos(y)+1)/2
 # c = 100/(log(100)^4) 
 # rho = c*log(n)^4/n
 rho = 1
-P = rho*(cosx + cosy)
+P = rho*(cosx + cosy)/2
 A = sym(matrix(runif(n^2)<P, nrow=n, ncol=n))
 print(paste0("Sparsity: ", 1 - (sum(A, na.rm = TRUE)/n^2)))
 
