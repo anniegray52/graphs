@@ -77,6 +77,7 @@ print(paste0("Number of graph components: ", components(G)$no))
 
 ## isomap
 ManifoldDist=distances(G)
+## alex - d can be estimated as approximate rank of InnerProductMatrix
 InnerProductMatrix = doublecentre(ManifoldDist^2)
 s = svds(InnerProductMatrix,k=2)
 Xhat = s$u[,1:2]%*% diag(sqrt(s$d[1:2]))
